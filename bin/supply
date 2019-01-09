@@ -18,6 +18,7 @@ wget --no-check-certificate -q -c \
 echo "Got Java"
 mkdir ${BUILD_DIR}/.java
 
+echo "tar zxf ${BIN_DIR}/jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1" 
 # Unpack jre content directly to .java in BUILD_DIR
 # -C is the directory, strip-components removes the top-level folder (jre_1.8.....)
 tar zxf ${BIN_DIR}/jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1
