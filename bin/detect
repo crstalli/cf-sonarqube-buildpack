@@ -2,6 +2,8 @@
 
 BUILD_DIR=$1
 
+echo "hello"
+
 # This pack is valid for apps with sonar.properties
 if [[ -f ${BUILD_DIR}/sonar.properties ]]; then
   echo "SonarQube"
