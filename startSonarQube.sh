@@ -9,14 +9,11 @@ export PATH=$PATH:/home/vcap/app/.java/bin
 perl -p -e 's/\$\{([^}]+)\}/defined $ENV{$1} ? $ENV{$1} : $&/eg; s/\$\{([^}]+)\}//eg' ./sonar.properties > ./sonar_replaced.properties
 mv ./sonar_replaced.properties ./sonar.properties
 
-echo "$(env)"
-cat ./sonar_replaced.properties
 cat ./sonar.properties
 
 echo "------------------------------------------------------" > /home/vcap/app/sonarqube/logs/sonar.log
 
 echo "-----> Starting SonarQube"
-ls -lat
 
 /home/vcap/app/sonarqube/bin/linux-x86-64/sonar.sh start
 
