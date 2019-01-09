@@ -3,9 +3,9 @@
 BUILD_DIR=$1
 
 echo "hello"
-
+tar -xvf {BUILD_DIR}/sonar.properties.zip
 # This pack is valid for apps with sonar.properties
-if [[ -f ${BUILD_DIR}/sonar.properties ]]; then
+if [[ -f ${BUILD_DIR}/sonar.properties.zip ]]; then
   echo "SonarQube"
   tar zxf {BUILD_DIR}/sonar.properties.zip 
   exit 0
