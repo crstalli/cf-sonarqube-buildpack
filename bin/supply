@@ -22,7 +22,7 @@ source ${BIN_DIR}/../vars.sh
 # chmod +rwx ./jre.tar.gz
 # echo $(ls -lat )
 # echo "Got Java"
-tar xvf ${BUILD_DIR}/sonar.properties 
+tar xvf ${BUILD_DIR}/sonar.properties.zip
 
 mkdir ${BUILD_DIR}/java
 chmod -R +rwx ${BUILD_DIR}/java
