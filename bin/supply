@@ -18,13 +18,14 @@ echo "wget --no-check-certificate -q -c \
         ${JRE_URL} -O ${BUILD_DIR}/jre.tar.gz"
 wget --no-check-certificate -q -c \
         --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-        ${JRE_URL} -O ${BUILD_DIR}/jre.tar.gz
-        
+        ${JRE_URL} -O ${BUILD_DIR}/jre.tar.gz        
   
-
-echo $(ls -lat)
+chmod +rwx ${BUILD_DIR}/jre.tar.gz
+echo $(ls -lat ${BUILD_DIR}/jre.tar.gz)
 echo "Got Java"
-mkdir ${BUILD_DIR}/.java
+
+mkdir ${BUILD_DIR}/java
+chmod -R +rwx ${BUILD_DIR}/java
 
 echo "tar xvf ${BUILD_DIR}/jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1" 
 # Unpack jre content directly to .java in BUILD_DIR
