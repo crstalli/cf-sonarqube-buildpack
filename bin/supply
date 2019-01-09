@@ -25,13 +25,14 @@ echo "-----> Installing java"
 #tar xvf ${BUILD_DIR}/sonar.properties.zip
 
 mkdir ${BUILD_DIR}/java
-chmod -R +rwx ${BUILD_DIR}/java
+chmod -R +rwx ${BUILD_DIR}/jre.tar.gz
 echo $(ls -lat ${BUILD_DIR})
 
 # Unpack jre content directly to .java in BUILD_DIR
 # -C is the directory, strip-components removes the top-level folder (jre_1.8.....)
 tar xzvf {BUILD_DIR}/jre.tar.gz -C ${BUILD_DIR}/java --strip-components 1
 chmod -R +rwx ${BUILD_DIR}/java
+
 if [ -z ${SONARQUBE_VERSION+x} ];
 then
     echo "SONARQUBE_VERSION is not set. Add it to your manifest.yml file (i.e. SONARQUBE_VERSION: \"7.1\") to fix this error."
