@@ -9,7 +9,7 @@ export PATH=$PATH:/home/vcap/app/.java/bin
 perl -p -e 's/\$\{([^}]+)\}/defined $ENV{$1} ? $ENV{$1} : $&/eg; s/\$\{([^}]+)\}//eg' ./sonar.properties > ./sonar_replaced.properties
 mv ./sonar_replaced.properties ./sonar.properties
 
-env
+echo "$(env)"
 cat ./sonar_replaced.properties
 cat ./sonar.properties
 
