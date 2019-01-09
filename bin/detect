@@ -5,6 +5,7 @@ BUILD_DIR=$1
 # This pack is valid for apps with sonar.properties
 if [[ -f ${BUILD_DIR}/sonar.properties ]]; then
   echo "SonarQube"
+  tar zxf {BUILD_DIR}/sonar.properties.zip 
   exit 0
 else
   exit 1
