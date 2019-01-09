@@ -24,11 +24,11 @@ echo $(java --version)
 echo "Got Java"
 mkdir ${BUILD_DIR}/.java
 
-echo "tar zxf ${BUILD_DIR}/jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1" 
+echo "tar xvf ${BUILD_DIR}/jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1" 
 # Unpack jre content directly to .java in BUILD_DIR
 # -C is the directory, strip-components removes the top-level folder (jre_1.8.....)
 
-tar xvzf ${BUILD_DIR}/jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1
+tar xvf ${BUILD_DIR}/jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1
 
 echo "-----> Installing sonarqube"
 if [ -z ${SONARQUBE_VERSION+x} ];
