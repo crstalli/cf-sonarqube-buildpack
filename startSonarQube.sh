@@ -14,7 +14,8 @@ cat ./sonar.properties
 echo "------------------------------------------------------" > /home/vcap/app/sonarqube/logs/sonar.log
 
 echo "-----> Starting SonarQube"
-
+env
+echo "---> end env"
 /home/vcap/app/sonarqube/bin/linux-x86-64/sonar.sh start
 
 echo "-----> Tailing log"
