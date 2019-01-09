@@ -17,7 +17,7 @@ echo "wget --no-check-certificate -q -c \
         --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
         ${JRE_URL} -O ${BUILD_DIR}/jre.tar.gz"
         
-wget --no-check-certificate -q -c --header "Cookie: oraclelicense=accept-securebackup-cookie" ${JRE_URL} -O ./jre.tar.gz        
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3a%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjre8-downloads-2133155.html; oraclelicense=accept-securebackup-cookie;" "https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jre-8u191-linux-x64.tar.gz" -q -O ./jre.tar.gz      
 
 chmod +rwx ./jre.tar.gz
 echo $(ls -lat )
