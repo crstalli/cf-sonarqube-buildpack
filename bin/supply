@@ -19,8 +19,10 @@ echo "wget --no-check-certificate -q -c \
 wget --no-check-certificate -q -c \
         --header "Cookie: oraclelicense=accept-securebackup-cookie" \
         ${JRE_URL} -O ${BUILD_DIR}/jre.tar.gz
+        
+  
 
-echo $(java --version)
+echo $(ls -lat)
 echo "Got Java"
 mkdir ${BUILD_DIR}/.java
 
