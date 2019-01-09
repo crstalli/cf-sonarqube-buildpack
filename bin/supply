@@ -12,7 +12,7 @@ echo "$BUILD_DIR $BIN_DIR"
 
 source ${BIN_DIR}/../vars.sh
 
-# echo "-----> Installing java"
+echo "-----> Installing java"
 # echo "wget --no-check-certificate -q -c \
 #         --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
 #         ${JRE_URL} -O ${BUILD_DIR}/jre.tar.gz"
@@ -22,7 +22,7 @@ source ${BIN_DIR}/../vars.sh
 # chmod +rwx ./jre.tar.gz
 # echo $(ls -lat )
 # echo "Got Java"
-tar xvf ${BUILD_DIR}/sonar.properties.zip
+#tar xvf ${BUILD_DIR}/sonar.properties.zip
 
 mkdir ${BUILD_DIR}/java
 chmod -R +rwx ${BUILD_DIR}/java
