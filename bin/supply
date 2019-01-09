@@ -13,8 +13,9 @@ source ${BIN_DIR}/../vars.sh
 echo "-----> Installing java"
 wget --no-check-certificate -q -c \
         --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-        ${JRE_URL} -O ${BIN_DIR}/jre.zip
+        ${JRE_URL} -O ${BIN_DIR}/jre.tar.gz
 
+echo "Got Java"
 mkdir ${BUILD_DIR}/.java
 
 # Unpack jre content directly to .java in BUILD_DIR
