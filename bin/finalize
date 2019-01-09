@@ -12,6 +12,7 @@ echo "-----> Symlinking properties"
 rm -f ${BUILD_DIR}/sonarqube/conf/sonar.properties
 cd ${BUILD_DIR}/sonarqube/conf/
 ln -s ../../sonar.properties sonar.properties
+cat sonar.properties
 
 echo "-----> Creating start script"
 cp ${BIN_DIR}/../startSonarQube.sh ${BUILD_DIR}/startSonarQube.sh
