@@ -20,19 +20,20 @@ echo "wget --no-check-certificate -q -c \
 wget --no-check-certificate -q -c --header "Cookie: oraclelicense=accept-securebackup-cookie" ${JRE_URL} -O ./jre.tar.gz        
 
 chmod +rwx ./jre.tar.gz
-echo $(ls -lat ${BUILD_DIR})
+echo $(ls -lat )
 echo "Got Java"
 
 mkdir ${BUILD_DIR}/java
 chmod -R +rwx ${BUILD_DIR}/java
 echo $(ls -lat ${BUILD_DIR})
 
-echo "tar xvf ./jre.tar.gz -C ${BUILD_DIR}/.java --strip-components 1" 
+echo "tar xvf ./jre.tar.gz -C ${BUILD_DIR}/java --strip-components 1" 
 # Unpack jre content directly to .java in BUILD_DIR
 # -C is the directory, strip-components removes the top-level folder (jre_1.8.....)
 
 tar zxvf ./jre.tar.gz -C ${BUILD_DIR}/java --strip-components 1
-
+chmod -R +rwx ${BUILD_DIR}/java
+echo $(ls -lat ${BUILD_DIR}/java)
 echo "-----> Installing sonarqube"
 if [ -z ${SONARQUBE_VERSION+x} ];
 then
