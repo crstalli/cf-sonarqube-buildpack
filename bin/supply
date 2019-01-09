@@ -29,6 +29,7 @@ then
     echo "SONARQUBE_VERSION is not set. Add it to your manifest.yml file (i.e. SONARQUBE_VERSION: \"7.1\") to fix this error."
     exit 1
 fi
+echo "$SONARQUBE_DIST_URL/sonarqube/$SONARQUBE_ZIP" -O ${BIN_DIR}/sonarqube.zip --no-check-certificate -q
 
 wget "$SONARQUBE_DIST_URL/sonarqube/$SONARQUBE_ZIP" -O ${BIN_DIR}/sonarqube.zip --no-check-certificate -q
 unzip -q ${BIN_DIR}/sonarqube.zip -d ${BUILD_DIR}
