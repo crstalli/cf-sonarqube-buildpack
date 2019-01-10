@@ -5,5 +5,5 @@ BUILD_DIR=$1
 cat <<EOF
 ---
 default_process_types:
-  web: /home/vcap/app/startSonarQube.sh
+  web: /home/vcap/app/startSonarQube.sh -p $PORT
 EOF
