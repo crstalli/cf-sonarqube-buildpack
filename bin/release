@@ -2,8 +2,6 @@
 
 BUILD_DIR=$1
 
-echo $(pwd)
-
 cat <<EOF
 ---
 default_process_types:
